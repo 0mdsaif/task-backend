@@ -3,7 +3,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import User from './models/User.js';
 import PointHistory from './models/PointHistory.js';
-require('dotenv').config
+
 
 /**
  * Express Server Configuration
@@ -63,7 +63,7 @@ app.post('/claim-points', async (req, res) => {
   try {
     const pointsAwarded = Math.floor(Math.random() * 10) + 1;
     const user = await User.findById(req.body.userId);
-    
+
     if (!user) {
       return res.status(404).json({ error: 'User not found' });
     }
