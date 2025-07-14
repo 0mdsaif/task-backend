@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 // Database Connection
-mongoose.connect(process.env.DATABASE_URL);
+mongoose.connect('mongodb+srv://mdsaifop1:VUqHVwYK2srUbzKA@cluster0.thfkptv.mongodb.net/');
 
 /**
  * Initial Data Setup
